@@ -32,10 +32,6 @@ llm = Llama(model_path="./models/mistral-7b-instruct-v0.1.Q4_K_M.gguf", n_ctx=20
 
 try:
     print("Model loaded successfully!")
-    # Your code to interact with the model goes here
-    # For example: response = llm.query("Your input query here")
-    print("Model loaded successfully!")
-    # Your code for querying the model goes here
     prompt = f"""You are a helpful news assistant.
 
     Based on the following news articles, answer the question in a clear, conversational tone.
@@ -48,7 +44,6 @@ try:
 
     response = llm(prompt, max_tokens=300, stop=["</s>"])
     print(response["choices"][0]["text"])
-
 
 finally:
     # Ensure model cleanup (deallocation) when done
