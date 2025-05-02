@@ -1,6 +1,9 @@
-# How to run
+# Collection of code and docs from own learnings 
+Goal of this repository is to keep code and documentation that i've seen and learnt regarding AI, LLM, datasets and much more
 
-## Virtual enviroment for python
+## How to run
+
+### Virtual enviroment for python
 Follow the steps in this link https://huggingface.co/docs/datasets/en/installation
 For windows when you want to activate run the PowerShell script generated
 ```
@@ -19,14 +22,14 @@ Download the c++ build tools https://visualstudio.microsoft.com/visual-cpp-build
 
 This is needed for the llama-cpp package
 
-## Install dependencies with pip
+### Install dependencies with pip
 ```
 pip install datasets
 pip install sentence-transformers
 pip install chromadb
 pip install llama-cpp-python
 ```
-## Download the LLM
+### Download the LLM
 Download this specific LLM https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q4_K_M.gguf
 
 And add it to /models folder, or any folder that would suit best just change the model_path in the code
