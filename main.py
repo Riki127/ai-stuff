@@ -3,22 +3,6 @@ from sentence_transformers import SentenceTransformer
 import chromadb
 from chromadb.utils.embedding_functions import SentenceTransformerEmbeddingFunction
 from llama_cpp import Llama
-import textwrap
-import html
-
-def display_results(results):
-    print("\n📰 Top Relevant News Articles:\n")
-    for i, article in enumerate(results, 1):
-        # Clean HTML entities
-        clean_text = html.unescape(article)
-
-        # Remove backslashes
-        clean_text = clean_text.replace("\\n", " ").replace("\\t", " ").replace("\\", "")
-
-        # Wrap lines for terminal
-        wrapped = textwrap.fill(clean_text, width=100)
-
-        print(f"{i}. {wrapped}\n")
 
 # --- 1. Load AG News subset
 dataset = load_dataset("ag_news", split="train[:2000]")
